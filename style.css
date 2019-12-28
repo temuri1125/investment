@@ -1,0 +1,402 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+  text-decoration: none;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ჩემი კოდი */
+
+  /* ჰედერი */
+
+
+.main_menu{
+  position: fixed;
+  max-width: 80%;
+  max-height: 130px;
+  width: 100%;
+  height: 120px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 3%;
+  z-index: 5;
+  background-color: white;
+}
+
+
+.menu_container{
+  width: 100%;
+  height: 100%;
+}
+
+.menu_row{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+
+    /* ლოგო */
+.menu_logo{
+  width: 25%;
+}
+
+.menu_logo a{
+  width: 25%;
+  height: 100%;
+}
+
+.menu_logo a img{
+  height: 100%;
+  margin: 0 20px;
+}
+
+/* საბჰედერი და მენიუ */
+.sub_and_main_menu{
+  width: 100%;
+  height: 100%;
+}
+
+    /* საბჰედერი */
+.sub_menu{
+  height: 50px;
+  width: 100%;
+}
+
+.sub1{
+  display: flex;
+  background-color: #262626;
+  padding-left: 100px;
+  padding-right: 40px;
+  position: relative;
+  height: 100%;
+}
+
+.sub1::before{
+  position: absolute;
+  top: -1px;
+  left: -2px;
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 55px 0 0 50px;
+  border-color: transparent transparent transparent #fff;
+}
+
+
+      /* ინფორმაცია */
+
+.menu_info{
+  width: 100%;
+  height: 100%;
+}
+
+.top_menu{
+  width: 75%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.top-menu-item{
+
+}
+
+.top-menu-item a{
+  color: #989898;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 50px;
+  margin-right: 25px
+}
+
+.top-menu-item a i{
+  padding-right: 10px;
+}
+
+.lang_menu{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s ease-out;
+}
+
+.sub1.top-menu-item{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lang_menu:before{
+  content: "\f0ac";
+  color: #999;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+.lang_menu button{
+  display: flex;
+  color: #999;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 50px;
+  padding: 0 6px;
+  background-color: transparent;
+  border: none
+}
+
+.lang_menu button span::after{
+  display: inline-block;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: "";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
+}
+
+
+.lang_menu ul{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: .5rem 0;
+  margin: .125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+}
+.lang_menu ul.show {
+  display: block;
+}
+
+
+      /* ინფორმაციის დასასრული */
+
+  /* ძირითადი მენიუ */
+.main_menu_nav{
+  display: flex;
+  width: 100%;
+  height: calc(100% - 50px);
+}
+.menu_navigation{
+  width: 80%;
+  height: 100%;
+}
+
+#menu_nav{
+  height: 100%;
+}
+
+#menu_nav ul{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#menu_nav ul span{
+  height: 50%;
+  width: 1px;
+  background-color: darkgray;
+}
+
+#menu_nav ul li{
+  margin: 0 22px;
+  font-size: 14px;
+  color: gray;
+  cursor: pointer;
+}
+
+.sign_menu{
+  width: 20%;
+  height: 100%;
+}
+
+.sign_user{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.sign_user::before{
+  content: "\f007";
+  color: #999;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+.sign_user button{
+  background-color: transparent;
+  border: 1px solid;
+  border-color: darkgray;
+  width: auto;
+  transition: 0.5s;
+  cursor: pointer;
+  margin: 0 10px;
+  width: 40%;
+  height: 35%;
+}
+
+
+
+
+
+
+/* პირველი სექცია */
+.home_section{
+  width: 100%;
+  height: 100vh;
+  background-image: url(img/bg1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+
+.main_text{
+  position: absolute;
+  display: inline-block;
+  top: 40%;
+  left: 5%;
+}
+
+.main_text h1{
+  font-size: 32px;
+  color: black;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.main_text h1 span{
+  color: blue;
+}
+
+.main_text h2{
+  font-size: 28px;
+  color: black;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 10px 0;
+}
+
+.main_text h2 span{
+  color: blue;
+}
+
+.main_buttons{
+  margin: 40px 0;
+}
+
+.main_buttons a:nth-child(1){
+  line-height: 22px;
+  border-width: 1px;
+  margin: 0px 10px 0px 0px;
+  padding: 10px 20px;
+  letter-spacing: 0px;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #18BA60;
+  border-color: #18BA60;
+}
+
+.main_buttons a:nth-child(2){
+  line-height: 22px;
+  border-width: 1px;
+  padding: 10px 20px;
+  letter-spacing: 0px;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #18BA60;
+  background-color: #fff;
+  border-color: #18BA60;
+}
