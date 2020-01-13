@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="style.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta charset="utf-8">
@@ -36,13 +37,17 @@
                   </div>
                   <!-- კონტაქტი დასასრული -->
                   <!-- ენა -->
-                  <div class="top-menu-item">
-                    <div class="lang_menu">
+                  <div class="top-menu-item lang_item">
+                    <!-- <div class="lang_menu">
                       <button type="btn dropdown_toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name="button"> Eng <span class="caret"></span></button>
                       <ul class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(18px, 50px, 0px);">
                           <li><a href="#">Georgian</a></li>
                         </ul>
-                    </div>
+                    </div> -->
+                    <select class="" name="">
+                      <option value="Eng">Eng</option>
+                      <option value="Geo">Geo</option>
+                    </select>
                   </div>
                   <!-- ენის დასასრული -->
 
@@ -54,10 +59,10 @@
                 <div class="menu_navigation">
                   <nav id="menu_nav">
                     <ul>
-                      <li>MAIN</li>
-                      <li>NEWS</li>
-                      <li>CONTACT</li>
-                      <li>ABOUT US</li>
+                      <a href="#home"><li>Main</li><span class="line"></span></a>
+                      <a href="#analysis"><li>Analysis</li></a>
+                      <a href="#contact"><li>Contact</li></a>
+                      <a href="#about"><li>About us</li></a>
                       <span></span>
                     </ul>
                   </nav>
@@ -79,7 +84,7 @@
 
 
 <!-- პირველის სექცია -->
-<section class="home_section">
+<section class="home_section" id="home">
   <div class="main_text">
     <h1>Proper <span>investment</span> increases opportunities</h1>
     <h2>start <span>today</span></h2>
@@ -89,6 +94,137 @@
     </div>
   </div>
 </section>
+
+
+<!-- ანალიზის სექცია -->
+
+
+
+
+
+
+
+<!-- კონტაქტის გვერდი -->
+<section class="contact_section" id="contact">
+  <div class="contact_container">
+    <h2>Contact Us</h2>
+    <h4>We are always ready to help you...</h4>
+    <div class="contact_row">
+      <div class="contact_col">
+        <div class="input_box">
+          <input type="text" name="" value="" required="required">
+          <span class="text">F/L Name</span>
+          <span class="line"></span>
+        </div>
+      </div>
+      <div class="contact_col">
+        <div class="input_box">
+          <input type="text" name="" value="" required="required">
+          <span class="text">E-mail</span>
+          <span class="line"></span>
+        </div>
+      </div>
+    </div>
+    <div class="contact_row">
+      <div class="contact_col">
+        <div class="input_box textarea">
+          <textarea name="name" rows="8" cols="80" required="required"></textarea>
+          <span class="text">Message</span>
+          <span class="line"></span>
+        </div>
+      </div>
+    </div>
+    <div class="contact_row">
+      <div class="contact_col">
+        <input type="submit" name="" value="Send">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ჩვენ შესახებ გვერდი -->
+<section class="about_us" id="about">
+  <div class="about_container">
+    <div class="about_text">
+      <h2>About Us</h2>
+      <h4>Our goal is to help you make the right choice. <br> Choice determines prosperity... </h4>
+      <!-- <h4>Choice determines prosperity...</h4> -->
+      <!-- <h6>Our Team</h6> -->
+    </div>
+    <div class="about_box">
+      <div class="box">
+        <div class="imgbox">
+          <img src="img\img1.jpg" alt="">
+        </div>
+        <ul class="social-icon">
+          <li><a href="#"> <i class="fa fa-facebook" aria-hidden="true"> </i></a></li>
+          <li><a href="#"> <i class="fa fa-instagram" aria-hidden="true"> </i></a></li>
+          <li><a href="#"> <i class="fa fa-twitter" aria-hidden="true"> </i></a></li>
+        </ul>
+        <div class="details">
+          <h2>Nino <br><span>Gabisonia</span></h2>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgbox">
+          <img src="img\img1.jpg" alt="">
+        </div>
+        <ul class="social-icon">
+          <li><a href="#"> <i class="fa fa-facebook" aria-hidden="true"> </i></a></li>
+          <li><a href="#"> <i class="fa fa-instagram" aria-hidden="true"> </i></a></li>
+          <li><a href="#"> <i class="fa fa-twitter" aria-hidden="true"> </i></a></li>
+        </ul>
+        <div class="details">
+          <h2>Temuri<br><span>Kitoshvili</span></h2>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgbox">
+          <img src="img\img1.jpg" alt="">
+        </div>
+        <ul class="social-icon">
+          <li><a href="#"> <i class="fa fa-facebook" aria-hidden="true"> </i></a></li>
+          <li><a href="#"> <i class="fa fa-instagram" aria-hidden="true"> </i></a></li>
+          <li><a href="#"> <i class="fa fa-twitter" aria-hidden="true"> </i></a></li>
+        </ul>
+        <div class="details">
+          <h2>Mariana<br><span>Sahxnazarian</span></h2>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imgbox">
+          <img src="img\img1.jpg" alt="">
+        </div>
+        <ul class="social-icon">
+          <li><a href="#"> <i class="fa fa-facebook" aria-hidden="true"> </i></a></li>
+          <li><a href="#"> <i class="fa fa-instagram" aria-hidden="true"> </i></a></li>
+          <li><a href="#"> <i class="fa fa-twitter" aria-hidden="true"> </i></a></li>
+        </ul>
+        <div class="details">
+          <h2>Karlo <br><span>Tevzadze</span></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+
+
+
+
+
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+
+
 
 
 
