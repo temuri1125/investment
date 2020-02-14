@@ -3,27 +3,53 @@
   <head>
     <link rel="stylesheet" href="style.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta charset="utf-8">
     <title>Python_project</title>
   </head>
   <body>
+
+
+
+
+
+
+
+
+
     <!-- ჰედერი -->
     <header>
       <div class="main_menu">
         <div class="menu_container">
           <nav class="manu_nav">
             <ul>
-              <a href="#main_section"><li><i class="fa fa-home" aria-hidden="true"></i><h1>Home</h1></li></a>
-              <a href="#contact"><li><i class="fa fa-comment" aria-hidden="true"></i><h1>Contact</h1></li></a>
-              <a href="#about"><li><i class="fa fa-user" aria-hidden="true"></i><h1>About</h1></li></a>
+              <button id="h_button"><li><i class="fa fa-home" aria-hidden="true"></i><h1>Home</h1></li></button>
+              <button id="c_button"><li><i class="fa fa-comment" aria-hidden="true"></i><h1>Contact</h1></li></button>
+              <button id="a_button"><li><i class="fa fa-user" aria-hidden="true"></i><h1>About</h1></li></a></button>
             </ul>
           </nav>
         </div>
       </div>
     </header>
 <!-- ჰედერის დასასრული -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <section id="main_section" class="main_section">
@@ -34,16 +60,37 @@
     </div>
     <div class="container_analyse">
       <div class="Investment">
-        <i class="fa fa-line-chart" aria-hidden="true"></i>
+        <button id="inv_button"><i class="fa fa-line-chart" aria-hidden="true"></i></button>
         <h4>Investment valuation</h4>
       </div>
       <div class="Portfolio">
-        <i class="fa fa-folder-open-o" aria-hidden="true"></i>
+        <button><i class="fa fa-folder-open-o" aria-hidden="true"></i></button>
         <h4>Portfolio evaluation</h4>
       </div>
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- კონტაქტის სექცია -->
 <section class="contact_section" id="contact">
   <div class="contact_container">
@@ -81,6 +128,24 @@
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- ჩვენ შესახებ სექცია -->
 <section class="about_us" id="about">
@@ -149,6 +214,79 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- შეფასების სექცია -->
+<!-- ივესტიცია -->
+<section id="Investment_valuation">
+  <div class="choose_method">
+    <h2>Select the evaluation method</h2>
+    <div class="methods">
+      <form action="">
+        <input type="checkbox" id="PBP" name="" value="" >
+        <label for="PBP">PBP</label>
+        <input type="checkbox" id="NPV" name="" value="">
+        <label for="NPV">NPV</label>
+        <input type="checkbox" id="PI" name="" value="">
+        <label for="PI">PI</label>
+        <input type="checkbox" id="IRR" name="" value="">
+        <label for="IRR">IRR</label>
+        <input type="checkbox" id="Return on Invested Capital" name="" value=""> 
+        <label for="Return on Invested Capital">Return on Invested Capital</label>
+      </form>
+    </div>
+  </div>
+
+
+
+</section>
+<!-- ივესტიცია დასასრული -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- მენიუ  -->
+<script>
+$(document).ready(function(){
+  $('#h_button').click(function(){
+      $("#main_section").show();
+      $("#contact, #about, #Investment_valuation").hide();
+  });
+  $('#c_button').click(function(){
+      $("#contact").show();
+      $("#main_section, #about, #Investment_valuation").hide();
+  });
+  $('#a_button').click(function(){
+      $("#about").show();
+      $("#main_section, #contact, #Investment_valuation").hide();
+  });
+  $('#inv_button').click(function(){
+      $("#Investment_valuation").show();
+      $("#main_section, #contact, #about").hide();
+  });
+});
+</script>
 
 
 

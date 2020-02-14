@@ -116,17 +116,22 @@ header{
   justify-content: center;
 }
 
-.manu_nav ul a{
+.manu_nav ul button{
   width: 50%;
   height: 10%;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   margin: 5px 0;
-  transition: .5s
+  transition: .5s;
+  background: transparent;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
 
-.manu_nav ul a li{
+.manu_nav ul button li{
   width: 100%;
   height: 100%;
   display: flex;
@@ -137,11 +142,11 @@ header{
 
 }
 
-.manu_nav ul a li h1{
+.manu_nav ul button li h1{
   display: none;
 }
 
-.manu_nav ul a li i{
+.manu_nav ul button li i{
   width: 50%;
   height: 100%;
   text-decoration: none;
@@ -153,12 +158,12 @@ header{
   justify-content: center;
 }
 
-.manu_nav ul a:hover{
+.manu_nav ul button:hover{
   transition: .5s ease-in-out;
   width: 80%;
   background: #07cdda;
 }
-.manu_nav ul a:hover li h1{
+.manu_nav ul button:hover li h1{
   width: 100%;
   height: 100%;
   font-family: sans-serif;
@@ -172,7 +177,7 @@ header{
   /* transition: 1s ease-in-out; */
 }
 
-.manu_nav ul a:hover li i{
+.manu_nav ul button:hover li i{
   color: white;
 }
 
@@ -198,6 +203,7 @@ header{
 .main_section{
   width: 100%;
   height: 100vh;
+  transition: 1s;
 }
 .main_section_container{
   width: 100%;
@@ -253,7 +259,31 @@ header{
   margin: 0 20px;
   transition: 0.5s;
 }
-.Investment i{
+.Investment button{
+	position: relative;
+  	width: 100%;
+  	height: 80%;
+	text-decoration: none;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	outline: none;
+}
+
+
+.Portfolio button{
+	position: relative;
+  	width: 100%;
+  	height: 80%;
+	text-decoration: none;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	outline: none;
+}
+
+
+.Investment button i{
   position: relative;
   width: 100%;
   height: 80%;
@@ -356,8 +386,11 @@ header{
 
 
 /* კონტაქტის სექციია დასაქყისი */
+#contact{
+	display: none;
+}
 .contact_section{
-	width: 85%;
+	width: 80%;
 	height: 100vh;
 	position: relative;
 	display: flex;
@@ -366,8 +399,13 @@ header{
 }
 
 .contact_container{
-	width: 80%;
+	width: 100%;
+	height: 100vh;
 	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .contact_container h2{
@@ -486,10 +524,14 @@ header{
 	height: 100%;
 }
 
+.contact_col{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 
 input[type="submit"]{
-	border: none;
 	padding: 7px 35px;
 	cursor: pointer;
 	outline: none;
@@ -499,6 +541,7 @@ input[type="submit"]{
 	border-radius: 2px;
 	border-radius: 50px;
 	color: white;
+	border: 1px solid #07cdda;
 }
 
 input[type="submit"]:hover{
@@ -528,6 +571,9 @@ input[type="submit"]:hover{
 
 
 /* ჩვენ შესახებ სექცია */
+#about{
+	display: none;
+}
 .about_us{
 	width: 85%;
 	height: 100vh;
@@ -711,6 +757,137 @@ input[type="submit"]:hover{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* შეფასების გვერდი */
+#Investment_valuation{
+	display: none;
+	width: 80%;
+	height: 100vh;
+}
+
+.choose_method{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	padding-top: 50px;
+}
+
+.choose_method h2{
+	font-family: sans-serif;
+	font-size: 24px;
+	text-transform: capitalize;
+	color: #07cdda;
+}
+
+
+.methods form{
+	width: 100%;
+	height: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 0;
+}
+
+input[type="checkbox"]{
+	display: none;
+}
+
+input[type="checkbox"]  + label {
+	display: block;
+	cursor: pointer;
+	z-index: 10;
+}
+
+input[type="checkbox"] + label:before{
+	content: "\f00c";
+	font-family: "FontAwesome";
+	width: 15px;
+	height: 15px;
+	margin-left: 30px;
+	margin-right: 10px;
+	border: 1px solid #07cdda;
+	color: transparent;
+	transition: .5s;
+}
+
+input[type="checkbox"]:checked + label:before{
+	color: #07cdda;
+	height: 20px;
+	background: transparent;
+	border: 1px solid transparent;
+	transition: .5s;
+}
+
+
+label{
+	color: #07cdda;
+}
+
+input[type="submit"]:hover{
+	transition: 0.5s;
+	border-radius: 5px;
+	color: #07cdda;
+	background: white;
+	border: 1px solid #07cdda;
+	cursor: pointer;
+}
+
+
+
+
+
+
+/* შეფასების გვერდის დასასრული */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* მედია ქუაერები */
 
 @media screen and (max-width: 1024px){
@@ -723,7 +900,7 @@ input[type="submit"]:hover{
 
 
 @media screen and (max-width: 768px) {
-	.manu_nav ul a:hover li h1{
+	.manu_nav ul button:hover li h1{
 		display: none;
 	}
 	.Investment{
@@ -737,24 +914,25 @@ input[type="submit"]:hover{
 		height: 200px;
 		margin: 0px 10px;
 	}
-	
+	.about_us{
+		display: none;
+	}
+	.manu_nav ul button:nth-child(3){
+		display: none;
+	}
 }
-
-
-
-
 
 @media screen and (max-width: 425px){
 	.main_menu{
 		width: 20%;
 	}
-	.manu_nav ul a li i{
+	.manu_nav ul button li i{
 		font-size: 18px;
 	}
-	.manu_nav ul a{
+	.manu_nav ul button{
 		height: 6%;
 	}
-	.manu_nav ul a:hover li h1{
+	.manu_nav ul button:hover li h1{
 		display: none;
 	}
 	.container_info{
@@ -788,6 +966,12 @@ input[type="submit"]:hover{
 	.box{
 		height: 350px;
 		margin: 20px 0;
+	}
+	.about_us{
+		display: none;
+	}
+	.manu_nav ul button:nth-child(3){
+		display: none;
 	}
 }
 
