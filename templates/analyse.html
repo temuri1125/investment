@@ -1,0 +1,90 @@
+{% extends 'index.html' %}
+
+
+
+
+
+{% block body %}
+
+<section class="capital_container">
+    <div class="capital_div">
+        <h2>კაპიტალის ღირებულება</h2>
+
+        
+        <form action="/capital" method="POST">
+            <label id="labal1" for="projectinp">პროექტის სახელი</label>
+            <input type="text" name="Project" id="projectinp" value="  {{Project}}" required> <br>
+            <!-- ვალი -->
+            <div class="formdiv">
+                <div class="bond_div">
+                    <h4>სასესხო კაპიტალის ღირებულება</h4>
+
+                    <label for="bondinp">მოთხოვნილი მოგების განაკვეთი</label> <br>
+                    <input type="number" name="Bond_rate" id="bondinp" value="{{Bond_rate}}" required> <br>
+
+                    <label for="taxinp">საგადასახადო განაკვეთი</label> <br>
+                    <input type="number" name="Tax" id="taxinp" value="{{Tax}}" required>  <br>        
+
+                    <!-- პასუხი -->
+                    <br>
+                    <p>სასესხო კაპიტალის ღირებულება: {{KI}} %</p>
+                </div>
+
+
+
+
+                <!-- ჩვეულებრივი აქციები -->
+                <div class="asset_div">
+                    <h4>ჩვეულებრივი აქციის ღირებულება</h4>
+
+                    <label for="Assetrateinp">ჩვეულებრივი აქციის საბაზრო ფასი</label> <br>
+                    <input type="number" name="Asset_prise" id="Assetrateinp" value="{{Asset_prise}}" required> <br>
+
+                    <label for="Dividendinp">დადგენილი წლიური დივიდენდი</label> <br>
+                    <input type="number" name="Dividend" id="Dividendinp" value="{{Dividend}}" required> <br>
+
+                    <label for="Changeinp">მოსალოდნელი დივიდენდის წლიური ცვლილება</label> <br>
+                    <input type="number" name="Change" id="Changeinp" value="{{Change}}" required> <br>
+
+
+                    <br>
+                    <p>ჩვეულებრივი აქციის ღირებულება: {{KS}} %</p>
+                </div>
+
+
+
+
+
+
+                <!-- პრივილეგირებული აქციები -->
+                <div class="p_asset_div">
+                    <h4>პრივილეგირებული აქციის ღირებულება</h4>
+
+                    <label for="Passetpriseinp">პრივილეგირებული აქციის საბაზრო ფასი</label> <br>
+                    <input type="number" name="Passet_prise" id="Passetpriseinp" value="{{Passet_prise}}" required> <br>
+
+                    <label for="pdividendinp">პრივილეგირებული აქციის დივიდენდი</label> <br>
+                    <input type="number" name="P_dividend" id="pdividendinp" value="{{P_dividend}}" required> <br>
+
+
+                    <br>
+                    <p>პრივილეგირებული აქციის ღირებულება: {{KD}} %</p>
+                </div>
+            </div>
+            <p>მთლიანი კაპიტალის ღირებულება: {{WACC}} %</p>
+        </form>
+
+
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+<!-- ვაექსტენდებთ ინდექსის ფაილს -->
+{% extends 'index.html' %}
+
+
+
+<!-- ჯინჯას მეთოდით ვქმნით ბოდი სექციას -->
+{% block body %}
+
+
+<section id="cap_container" class="capital_container">
+    <h2>პორთფელის შეფასება</h2>
+    <div id="portdiv" class="capital_div">
+        <form action="" method="POST">
+            <label id="labal1" for="projectinp">პორთფელი</label>
+            <input type="text" name="Project" id="projectinp" value="  {{Project}}" required> <br> <br>
+            <br>
+
+            <label for="riskfree">ურისკო განაკვეთი</label> <br>
+            <input type="number" name="Risk_free" min="1" id="riskfree" value="{{Risk_free}}" required>
+            <br>
+            <label for="MarkeTrevenueinp">საბაზრო პორთფელის მოსალოდნელი მოგება</label> <br>
+            <input type="number" name="MarkeT_revenue" min="1" id="MarkeTrevenueinp" value="{{MarkeT_revenue}}" required>
+            <br>
+            <label for="Sistriskinp">საბაზრო პორთფელის სისტემური რისკი </label> <br>
+            <input type="number" name="Sist_risk" min="1" id="Sistriskinp" value="{{Sist_risk}}" required>
+            <br>
+            <label for="Preferredinp">პორთფელის სასურველი რისკი</label> <br>
+            <input type="number" name="Preferred_risk" min="1" id="Preferredinp" value="{{Preferred_risk}}" required>
+            <br>
+            <p id="portfolio_p">რისკის საბაზრო ფასი: {{Risk_market}} %</p>
+        </form>
+    </div>
+    <p>პორთფელ {{Project}} -ის მოსალოდნელი მოგება: {{portfolio_profit}} %</p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

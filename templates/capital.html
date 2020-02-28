@@ -1,0 +1,87 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<section class="capital_container">
+    <div class="capital_div">
+        <h2>კაპიტალის ღირებულება</h2>
+
+        
+        <form action="/capital" method="POST">
+            <!-- ვალი -->
+            <label id="labal1" for="projectinp">პროექტი</label>
+            <input type="text" name="Project" id="projectinp" placeholder="  შეიყვანეთ სახელი" required>
+            <div class="formdiv">
+                <div class="bond_div">
+                    <h4>სასესხო კაპიტალის ღირებულება</h4>
+
+                    <label for="bonddinp">სესხი/ობლიგაციების მთლიანი ფასი</label> <br>
+                    <input type="number" name="Bond" id="bonddinp" min="1" placeholder=" მთლიანი ფასი" required> <br>
+
+                    <label for="bondinp">მოთხოვნილი მოგების განაკვეთი</label> <br>
+                    <input type="number" name="Bond_rate" id="bondinp" min="1" placeholder=" %" required> <br>
+
+                    <label for="taxinp">საგადასახადო განაკვეთი</label> <br>
+                    <input type="number" name="Tax" id="taxinp" min="1" placeholder=" %" required>  <br>        
+
+                </div>
+
+
+
+
+
+                <!-- ჩვეულებრივი აქციები -->
+                <div class="asset_div">
+                    <h4>ჩვეულებრივი აქციის ღირებულება</h4>
+
+                    <label for="Assetainp">ჩვეულებრივი აქციების მთლიანი ფასი</label> <br>
+                    <input type="number" name="Asset" id="Assetainp" min="1" placeholder=" მთლიანი ფასი" required> <br>
+
+                    <label for="Assetrateinp">ჩვეულებრივი აქციის საბაზრო ფასი</label> <br>
+                    <input type="number" name="Asset_prise" id="Assetrateinp" min="1" placeholder="  ერთეულის ფასი" required> <br>
+
+                    <label for="Dividendinp">დადგენილი წლიური დივიდენდი</label> <br>
+                    <input type="number" name="Dividend" id="Dividendinp" min="1" placeholder="  ერთეულის ფასი" required> <br>
+
+                    <label for="Changeinp">მოსალოდნელი დივიდენდის წლიური ცვლილება</label> <br>
+                    <input type="number" name="Change" id="Changeinp" min="1" placeholder=" + / -    %" required> <br>
+
+                </div>
+
+
+
+
+
+
+                <!-- პრივილეგირებული აქციები -->
+                <div class="p_asset_div">
+                    <h4>პრივილეგირებული აქციის ღირებულება</h4>
+
+                    <label for="Passetpinp">პრივილეგირებული აქციების მთლიანი ფასი</label> <br>
+                    <input type="number" name="Passet" id="Passetpinp" min="1" placeholder=" მთლიანი ფასი" required> <br>
+
+                    <label for="Passetpriseinp">პრივილეგირებული აქციის საბაზრო ფასი</label> <br>
+                    <input type="number" name="Passet_prise" id="Passetpriseinp" min="1" placeholder="  ერთეულის ფასი" required> <br>
+
+                    <label for="pdividendinp">პრივილეგირებული აქციის დივიდენდი</label> <br>
+                    <input type="number" name="P_dividend" id="pdividendinp" min="1" placeholder="  ერთეულის ფასი" required> <br>
+
+                </div>
+                <a href="/analyse"><button type="submit">შეფასება</button></a>
+            </div>
+        </form>
+
+
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+
+<section class="capital_container">
+    <h2>პორთფელის შეფასება</h2>
+    <div id="portdiv" class="capital_div">
+        <form action="" method="POST">
+
+            <label id="labal1" for="projectinp">პორთფელი</label>
+            <input type="text" name="Project" id="projectinp" placeholder="  შეიყვანეთ სახელი" required> <br> <br>
+            <br>
+
+            <label for="riskfree">ურისკო განაკვეთი</label> <br>
+            <input type="number" name="Risk_free" min="1" id="riskfree" placeholder="  %" required>
+            <br>
+            <label for="MarkeTrevenueinp">საბაზრო პორთფელის მოსალოდნელი მოგება</label> <br>
+            <input type="number" name="MarkeT_revenue" min="1" id="MarkeTrevenueinp" placeholder="  %" required>
+            <br>
+            <label for="Sistriskinp">საბაზრო პორთფელის სისტემური რისკი </label> <br>
+            <input type="number" name="Sist_risk" min="1" id="Sistriskinp" placeholder="  %" required>
+            <br>
+            <label for="Preferredinp">პორთფელის სასურველი რისკი</label> <br>
+            <input type="number" name="Preferred_risk" min="1" id="Preferredinp" placeholder="  %" required>
+            <br>
+            <a href=""><button type="submit">შეფასება</button></a>
+            
+        </form>
+        <div class="portdiv">
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
